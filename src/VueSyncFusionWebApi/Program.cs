@@ -1,8 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Northwind.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<NorthwindDbContext>(options =>
+{
+    options.UseLazyLoadingProxies();
+    options.UseSqlServer(builder.Configuration
+        .GetConnectionString("NorthwindDb"));
+    options.EnableSensitiveDataLogging();
+}, ServiceLifetime.Transient);
 
 var app = builder.Build();
 
