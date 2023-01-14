@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@syncfusion/ej2-vue-grids": "^20.4.43",
+    "vue-class-component": "^8.0.0-rc.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {

@@ -21,6 +21,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="7.0.2" />
     <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="20.4.0.43" />
+    <PackageReference Include="Syncfusion.Licensing" Version="20.4.0.43" />
   </ItemGroup>
 
   <ItemGroup>
